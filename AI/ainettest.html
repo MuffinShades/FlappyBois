@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ainet v1.0</title>
+        <style>
+            #dfa {
+                z-index: 99999;
+                position: absolute;
+                top: 100px;
+                left: 100px;
+            }
+            #c {
+                z-index: 00;
+            }
+            #hax {
+                width: 250px;
+                height: 100%;
+                position: absolute;
+                right: 0;
+                top: 0px;
+                z-index: 99999;
+                background-color: #fff;
+                border: 1px solid #999;
+                padding: 5px;
+                overflow: scroll;
+                resize: none;
+            }
+        </style>
+    </head>
+    <body>
+        <p id='dfa'>AINET</p>
+        <div id='hax'>
+            <div style='display: flex;'>
+                <button onclick='setSpeed(document.getElementById("s-val").value)'>Change Speed</button>
+                <input type='number' placeholder='Speed' id='s-val'>
+            </div>
+            <button onclick='ac()'>Access AI</button>
+            <br>
+            <input type='number' placeholder='AI id' id='acid'>
+            <br>
+            <label>Alert Brain: </label><input type='checkbox' id='alertyn'>
+            <textarea id='acid-out' style='width:200px;height:300px;resize: none;'></textarea>
+        </div>
+        <canvas id='c' style='position: absolute; top: 0; left: 0;'></canvas>
+        <script src='ainet.js'></script>
+        <script src='index.js'></script>
+    </body>
+</html>
